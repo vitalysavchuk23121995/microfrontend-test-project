@@ -1,3 +1,5 @@
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   output: {
     publicPath: "auto",
@@ -25,4 +27,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
 };
